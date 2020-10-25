@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xy_Calculator.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="FontPrincipal">
+                <On Platform="Android" Value="ArchitectsDaughterRegular.ttf#Architects Daughter"/>
+            </OnPlatform>
+
+            <Style TargetType="StackLayout" Class="FundoPreto">
+                <Setter Property="BackgroundColor" Value="#2f3136"/>
+                <Setter Property="Spacing" Value="20"/>
+            </Style>
+
+            <Style TargetType="Frame" Class="FundoAzul">
+                <Setter Property="BackgroundColor" Value="#7289da"/>
+                <Setter Property="Margin" Value="20"/>
+                <Setter Property="CornerRadius" Value="20"/>
+            </Style>
+
+            <Style TargetType="Label" Class="Welcome">
+                <Setter Property="Margin" Value="0,20,0,0"/>
+                <Setter Property="FontFamily" Value="{StaticResource FontPrincipal}"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style TargetType="Button" Class="btnMenu">
+                <Setter Property="BackgroundColor" Value="#7289da"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontFamily" Value="{StaticResource FontPrincipal}"/>
+                <Setter Property="Margin" Value="10,0,10,10"/>
+                <Setter Property="HeightRequest" Value="80"/>
+            </Style>
+
+            <Style TargetType="ContentPage" Class="FundoAzul">
+                <Setter Property="BackgroundColor" Value="#7289da"/>
+                <Setter Property="HeightRequest" Value="70"/>
+            </Style>
+
+
+            <Style TargetType="StackLayout" Class="Cabecalho">
+                <Setter Property="BackgroundColor" Value="#7289da"/>
+                <Setter Property="HeightRequest" Value="70"/>
+            </Style>
+
+            <Style TargetType="Label" Class="txtCabCentral">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="{StaticResource FontPrincipal}"/>
+                <Setter Property="FontSize" Value="35"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+
+            <Style TargetType="Frame" Class="Frames">
+                <Setter Property="BackgroundColor" Value="#4563cc"/>
+                <Setter Property="Padding" Value="20"/>
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+
+            <Style TargetType="Entry" Class="Entrys">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="BackgroundColor" Value="#4563cc"/>
+                <Setter Property="FontFamily" Value="{StaticResource FontPrincipal}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="Keyboard" Value="Numeric"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style TargetType="Label" Class="Labels">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontFamily" Value="{StaticResource FontPrincipal}"/>
+            </Style>
+
+            <Style TargetType="Button" Class="Botoes">
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="BackgroundColor" Value="#4563cc"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontFamily" Value="{StaticResource FontPrincipal}"/>
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

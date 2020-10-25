@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xy_Calculator.View.TelaAreaTrianguloSARRI"
+             Title="Area do Triângulo (SARRI)">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout class="FundoPreto">
+                <Frame class="FundoAzul">
+                    <StackLayout Spacing="20">
+                        <Frame class="Frames">
+                            <Label Text="Área do triângulo com seus pontos (SARRI)" FontSize="35" class="Labels"/>
+                        </Frame>
+
+                        <Frame class="Frames">
+                            <StackLayout>
+                                <Label Text="Os pontos serão inseridos com o modelo:" class="Labels"/>
+                                <Label Text="(x,y)" class="Labels"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <StackLayout>
+                            <Label Text="Informe o 1º Ponto:" class="Labels"/>
+                            <Frame class="Frames">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.5*" />
+                                        <ColumnDefinition Width="0.5*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50" />
+                                    </Grid.RowDefinitions>
+
+                                    <Entry Grid.Column="0" class="Entrys" Placeholder="X" x:Name="txtX1"/>
+                                    <Entry Grid.Column="1" class="Entrys" Placeholder="Y" x:Name="txtY1"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Label Text="Informe o 2º Ponto:" class="Labels"/>
+                            <Frame class="Frames">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.5*" />
+                                        <ColumnDefinition Width="0.5*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50" />
+                                    </Grid.RowDefinitions>
+
+                                    <Entry Grid.Column="0" class="Entrys" Placeholder="X" x:Name="txtX2"/>
+                                    <Entry Grid.Column="1" class="Entrys" Placeholder="Y" x:Name="txtY2"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Label Text="Informe o 3º Ponto:" class="Labels"/>
+                            <Frame class="Frames">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.5*" />
+                                        <ColumnDefinition Width="0.5*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50" />
+                                    </Grid.RowDefinitions>
+
+                                    <Entry Grid.Column="0" class="Entrys" Placeholder="X" x:Name="txtX3"/>
+                                    <Entry Grid.Column="1" class="Entrys" Placeholder="Y" x:Name="txtY3"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+
+                        <Button Text="Calcular" class="Botoes" Clicked="CalcularAreaTriangulo"/>
+
+                        <StackLayout>
+                            <Label Text="Informações:" HorizontalOptions="Start" class="Labels"/>
+                            <Frame class="Frames">
+                                <Label Text="" class="Labels" x:Name="Informacoes"/>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Label Text="Resolução:" HorizontalOptions="Start" class="Labels"/>
+                            <Frame class="Frames">
+                                <StackLayout x:Name="StackResolucao">
+
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                        <Label Text="A área do triangulo é:" class="Labels" />
+
+                        <Frame class="Frames">
+                            <Label Text="" HeightRequest="40" class="Labels" x:Name="ValorAreaTriangulo"/>
+                        </Frame>
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

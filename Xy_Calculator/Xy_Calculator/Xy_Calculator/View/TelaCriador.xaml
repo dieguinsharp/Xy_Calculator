@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xy_Calculator.View.TelaCriador">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout class="FundoPreto">
+                <Frame class="FundoAzul">
+                    <StackLayout Spacing="20">
+                        <Frame class="Frames">
+                            <Label Text="Diego Menezes Soares" class="Labels"/>
+                        </Frame>
+
+                        <Image Source="eu.png" HeightRequest="300" WidthRequest="300" Opacity="0.7"/>
+
+                        <Label Text="Sobre o App:" class="Labels" HorizontalOptions="Start"/>
+                        
+                        <Frame class="Frames">
+                            <StackLayout>
+                                <Label class="Labels" Text="Pensando nas diversas dificuldades que existem em fixar essas fórmulas na mente, criei esse Aplicativo na intenção de ajudar todos aqueles que tem certa dificuldade com essas matérias." FontSize="25" HorizontalOptions="Center"/>
+                                <Label class="Labels" Text="Todas as respostas vem com resoluções em linhas e sem nenhum tipo de 'dificuldade'" FontSize="25" HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="Sobre o Mim:" class="Labels" HorizontalOptions="Start"/>
+
+                        <Frame class="Frames">
+                            <StackLayout>
+                                <Label class="Labels" Text="Dev C# com experiência em WinForms, MySql, Xamarin, HTML e CSS." FontSize="25" HorizontalOptions="Center"/>
+                                <Label class="Labels" Text="Todo estudo sobre lógica de programação feita em C#." FontSize="25" HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Label Text="Contato:" class="Labels" HorizontalOptions="Start"/>
+
+                        <Frame class="Frames">
+                            <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Spacing="25">
+                                <Image Source="fb.png" HeightRequest="40" WidthRequest="40">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="OnFacebook"
+                                            NumberOfTapsRequired="1" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <Image Source="gt.png" HeightRequest="40" WidthRequest="40">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="OnGithub"
+                                            NumberOfTapsRequired="1" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <Image Source="instagram.png" HeightRequest="40" WidthRequest="40">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="OnInstagram"
+                                            NumberOfTapsRequired="1" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

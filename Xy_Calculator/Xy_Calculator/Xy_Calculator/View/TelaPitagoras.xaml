@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xy_Calculator.View.TelaPitagoras"
+             Title="Pitágoras">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout class="FundoPreto">
+                <Frame class="FundoAzul">
+                    <StackLayout Spacing="20">
+                        <Frame class="Frames">
+                            <Label Text="Pitágoras" FontSize="45" class="Labels"/>
+                        </Frame>
+
+                        <Frame class="Frames">
+                            <Label Text="Por favor, insira o valor 0 para o lado que você deseja encontrar!" class="Labels"/>
+                        </Frame>
+                        <StackLayout>
+                            <Label Text="Modelo:" HorizontalOptions="Start" class="Labels"/>
+                            <Image HeightRequest="150" Source="imgModelo.png" Aspect="Fill" VerticalOptions="FillAndExpand" IsOpaque="False"/>
+                        </StackLayout>
+                        
+
+                        <Frame class="Frames">
+                            <StackLayout Spacing="15">
+                                <Label Text="Digite o Valor de A:" class="Labels"/>
+                                <Entry class="Entrys" x:Name="txtA"/>
+
+                                <Label Text="Digite o Valor de B:" class="Labels"/>
+                                <Entry class="Entrys" x:Name="txtB"/>
+
+                                <Label Text="Digite o Valor de C:" class="Labels"/>
+                                <Entry class="Entrys" x:Name="txtC"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Button Text="Calcular" class="Botoes" Clicked="CalcularPitagoras"/>
+
+                        <StackLayout>
+                            <Label Text="Informações:" HorizontalOptions="Start" class="Labels"/>
+                            <Frame class="Frames">
+                                <Label Text="" class="Labels" x:Name="Informacoes"/>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Label Text="Resolução:" HorizontalOptions="Start" class="Labels"/>
+                            <Frame class="Frames">
+                                <StackLayout x:Name="StackResolucao">
+
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                        <Label Text="O valor do lado é:" class="Labels" />
+
+                        <Frame class="Frames">
+                            <Label Text="" HeightRequest="40" class="Labels" x:Name="ValorPitagoras"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

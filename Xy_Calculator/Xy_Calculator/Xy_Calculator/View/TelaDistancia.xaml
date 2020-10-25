@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xy_Calculator.View.TelaDistancia"
+             Title="Distância entre pontos">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout class="FundoPreto">
+                <Frame class="FundoAzul">
+                    <StackLayout Spacing="20">
+                        <Frame class="Frames">
+                            <Label Text="Distância entre 2 pontos" FontSize="35" class="Labels"/>
+                        </Frame>
+                        <StackLayout>
+                            <Label Text="Primeiro Ponto:" HorizontalOptions="Start" class="Labels"/>
+                            <Frame class="Frames">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.5*" />
+                                        <ColumnDefinition Width="0.5*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50" />
+                                    </Grid.RowDefinitions>
+
+                                    <Entry Grid.Column="0" class="Entrys" Placeholder="X" x:Name="txtX1"/>
+                                    <Entry Grid.Column="1" class="Entrys" Placeholder="Y" x:Name="txtY1"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Label Text="Segundo Ponto:" HorizontalOptions="Start" class="Labels"/>
+                            <Frame class="Frames">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.5*" />
+                                        <ColumnDefinition Width="0.5*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50" />
+                                    </Grid.RowDefinitions>
+
+                                    <Entry Grid.Column="0" class="Entrys" Placeholder="X" x:Name="txtX2"/>
+                                    <Entry Grid.Column="1" class="Entrys" Placeholder="Y" x:Name="txtY2"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+
+                        <Button Text="Calcular" class="Botoes" Clicked="OnCalcularDistancia"/>
+
+                        <StackLayout>
+                            <Label Text="Informações:" HorizontalOptions="Start" class="Labels"/>
+                            <Frame class="Frames">
+                                <Label Text="" class="Labels" x:Name="Informacoes"/>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Label Text="Resolução:" HorizontalOptions="Start" class="Labels"/>
+                            <Frame class="Frames">
+                                <StackLayout x:Name="StackResolucao">
+
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                        <Label Text="A distância é de:" class="Labels" />
+
+                        <Frame class="Frames">
+                            <Label Text="" HeightRequest="40" class="Labels" x:Name="ValorDistância"/>
+                        </Frame>
+                        
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

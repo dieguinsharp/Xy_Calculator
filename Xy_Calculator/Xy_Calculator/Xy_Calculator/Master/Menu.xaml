@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xy_Calculator.Master.Menu"
+             xmlns:master="clr-namespace:Xy_Calculator.View"
+             Title="Boas vindas">
+
+    <MasterDetailPage.ToolbarItems>
+        <ToolbarItem IconImageSource="iconeInfo.png" Order="Primary" Priority="0" Clicked="OnIconeInfo"/>
+    </MasterDetailPage.ToolbarItems>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage Title="Master">
+            <x:Arguments>
+                <master:TelaBoasVindas/>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <ContentPage.Content>
+                <ScrollView>
+                    <StackLayout class="FundoPreto">
+                        <StackLayout class="Cabecalho">
+                            <Label Text="Menu de Opções" class="txtCabCentral"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Button Text="Início" class="btnMenu" Clicked="OnInicio"/>
+                            <Button Text="Delta, x' e x''" class="btnMenu" Clicked="OnTelaDelta"/>
+                            <Button Text="Distancia entre pontos" class="btnMenu" Clicked="OnTelaDistancia"/>
+                            <Button Text="Pitágoras" class="btnMenu" Clicked="OnTelaPitagoras"/>
+                            <Button Text="Baricentro do Triangulo" class="btnMenu" Clicked="OnTelaBaricentro"/>
+                            <Button Text="Sistemas de 1º Grau" class="btnMenu" Clicked="OnTelaSistemas"/>
+                            <Button Text="Equação da reta" class="btnMenu" Clicked="OnEquacaoDaReta"/>
+                            <Button Text="Equação reduzida da reta" class="btnMenu" Clicked="OnEquacaoReduzida"/>
+                            <Button Text="Coeficiente angular 1º Grau" Clicked="OnCoeficienteAngular" class="btnMenu"/>
+                            <Button Text="Coeficiente Linear" class="btnMenu" Clicked="OnCoefLinear"/>
+                            <Button Text="Área triangulo Retângulo pelos pontos (SARRI)" class="btnMenu" Clicked="OnAreaTriangulo"/>
+                            <Button Text="Vertice de X e Y" Clicked="OnVerticeXY" class="btnMenu"/>
+                            <Button Text="Ponto medio entre 2 pontos" class="btnMenu" Clicked="OnPontoMedio"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

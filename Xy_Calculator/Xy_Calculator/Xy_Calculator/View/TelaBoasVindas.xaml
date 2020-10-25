@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xy_Calculator.View.TelaBoasVindas"
+             Title="Boas Vindas">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout class="FundoPreto">
+                <Frame class="FundoAzul">
+                    <StackLayout>
+                        <Label Text="Bem vindo!" class="Welcome" FontSize="40"/>
+                        <Label Text="Esse app foi criado na intenção de simplificar o cotidiano de pessoas que necessitam de resoluções rápidas e precisas." class="Welcome"/>
+                        <Label Text="Por favor, o seu aprendizado é importante para nós, então use o app apenas para fins de dúvidas e evite usa-lo sem o intuito de aprender!" class="Welcome"/>
+                        <Label Text="É para o seu bem!" class="Welcome"/>
+                        <Label Text="As resoluções estão no Menu a esquerda!" TextColor="White" class="Welcome"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

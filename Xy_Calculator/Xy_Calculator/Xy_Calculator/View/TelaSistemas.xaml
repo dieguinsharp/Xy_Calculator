@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xy_Calculator.View.TelaSistemas"
+             Title="Sistemas 1º Grau">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout class="FundoPreto">
+                <Frame class="FundoAzul">
+                    <StackLayout Spacing="20">
+                        <Frame class="Frames">
+                            <Label Text="Baricentro do Triângulo" FontSize="35" class="Labels"/>
+                        </Frame>
+
+                        <Frame class="Frames">
+                            <Label Text="Por favor, insira 0 quando os valores não existirem. Infinity e quando o sistema é impossivel!" class="Labels"/>
+                        </Frame>
+                        <StackLayout>
+                            <Label Text="Primeira linha:" class="Labels" HorizontalOptions="Start"/>
+                            <Frame class="Frames">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.5*" />
+                                        <ColumnDefinition Width="0.5*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="0.5*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50" />
+                                    </Grid.RowDefinitions>
+
+                                    <Entry Grid.Column="0" class="Entrys" Placeholder="X" x:Name="txtX"/>
+                                    <Entry Grid.Column="1" class="Entrys" Placeholder="Y" x:Name="txtY"/>
+                                    <Label Grid.Column="2" Text ="=" class="Labels" FontSize="35"/>
+                                    <Entry Grid.Column="3" class="Entrys" Placeholder="Num" x:Name="txtNum1"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Label Text="Segunda Linha:" class="Labels" HorizontalOptions="Start"/>
+                            <Frame class="Frames">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.5*" />
+                                        <ColumnDefinition Width="0.5*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="0.5*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50" />
+                                    </Grid.RowDefinitions>
+
+                                    <Entry Grid.Column="0" class="Entrys" Placeholder="X" x:Name="txtX2"/>
+                                    <Entry Grid.Column="1" class="Entrys" Placeholder="Y" x:Name="txtY2"/>
+                                    <Label Grid.Column="2" Text ="=" class="Labels" FontSize="35"/>
+                                    <Entry Grid.Column="3" class="Entrys" Placeholder="Num" x:Name="txtNum2"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+
+                        <Button Text="Calcular" class="Botoes" Clicked="CalcularSistemas"/>
+
+                        <StackLayout>
+                            <Label Text="Informações:" HorizontalOptions="Start" class="Labels"/>
+                            <Frame class="Frames">
+                                <Label Text="" class="Labels" x:Name="Informacoes"/>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Label Text="Resolução:" HorizontalOptions="Start" class="Labels"/>
+                            <Frame class="Frames">
+                                <StackLayout x:Name="StackResolucao">
+
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                        <Label Text="A solução é:" class="Labels" />
+
+                        <Frame class="Frames">
+                            <Label Text="" HeightRequest="40" class="Labels" x:Name="ValorSolucao"/>
+                        </Frame>
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

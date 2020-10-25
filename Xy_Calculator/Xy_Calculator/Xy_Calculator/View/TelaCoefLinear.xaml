@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xy_Calculator.View.TelaCoefLinear"
+             Title="Coeficiente Linear">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout class="FundoPreto">
+                <Frame class="FundoAzul">
+                    <StackLayout Spacing="20">
+                        <Frame class="Frames">
+                            <Label Text="Coeficiente Linear" FontSize="35" class="Labels"/>
+                        </Frame>
+                        <StackLayout>
+                            <Label Text="Escolha um dos dois pontos e:" HorizontalOptions="Start" class="Labels"/>
+                            <Frame class="Frames">
+                                <StackLayout>
+                                    <Label Text="Digite o valor de X:" class="Labels"/>
+                                    <Entry class="Entrys" x:Name="txtX1"/>
+
+                                    <Label Text="Digite o valor de Y:" class="Labels"/>
+                                    <Entry class="Entrys" x:Name="txtY1"/>
+
+                                    <Label Text="Coeficiente Angular:" class="Labels"/>
+                                    <Entry class="Entrys" x:Name="txtCoeficiente"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                        <Button Text="Calcular" class="Botoes" Clicked="OnCalcularLinear"/>
+
+                        <StackLayout>
+                            <Label Text="Informações:" HorizontalOptions="Start" class="Labels"/>
+                            <Frame class="Frames">
+                                <Label Text="" class="Labels" x:Name="Informacoes"/>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Label Text="Resolução:" HorizontalOptions="Start" class="Labels"/>
+                            <Frame class="Frames">
+                                <StackLayout x:Name="StackResolucao">
+
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                        <Label Text="O coef. Linear é:" class="Labels" />
+
+                        <Frame class="Frames">
+                            <Label Text="" HeightRequest="40" class="Labels" x:Name="ValorLinear"/>
+                        </Frame>
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
